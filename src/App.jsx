@@ -65,37 +65,32 @@ const App = () => {
           items={items}
           selectedKeys={getSelectedKey()}
           style={{
-            flex: 1,
+            marginLeft: 'auto',
             minWidth: 0,
           }}
         />
       </Header>
       <Content
+        className='main-part'
         style={{
           padding: '0 48px',
         }}
       >
-        <div
-          style={{
-            minHeight: 280,
-            padding: 24,
-          }}
-        >
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/location" element={<Location />} />
             <Route path="/plan" element={<Plan />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </div>
       </Content>
+      <div className='custom-hr'>&nbsp;</div>
       <Footer
         style={{
           textAlign: 'center',
           background: 'white'
         }}
       >
-        Набережная 26 ©2025 Разработано сообществом <a href="https://vk.com/history_photo_nur" target='_blank'>«Нур в объективе»</a>
+        ©2025 <a href="https://vk.com/history_photo_nur" target='_blank'>«Нур в объективе»</a>
       </Footer>
     </Layout>
   );
